@@ -35,8 +35,8 @@ public class Cilindrado extends javax.swing.JDialog {
         rdb_G50.setEnabled(Principal.G50);
         rdb_G97.setSelected(!Principal.G50);
         txt_G96S.setEnabled(Principal.G50);
-        ckb_Ac.setSelected(false);
-        ckb_AcComp.setSelected(false);
+        ckb_Acabado.setSelected(false);
+        ckb_Compenzacion.setSelected(false);
         if (Herramienta.IntExt) {
             this.setTitle("Cilindrado interior");
         } else {
@@ -112,11 +112,11 @@ public class Cilindrado extends javax.swing.JDialog {
         jLabel12 = new javax.swing.JLabel();
         txt_G0iniZ = new javax.swing.JTextField();
         ckb_Refrigerante = new javax.swing.JCheckBox();
-        ckb_AcComp = new javax.swing.JCheckBox();
+        ckb_Compenzacion = new javax.swing.JCheckBox();
         jScrollPane2 = new javax.swing.JScrollPane();
         txt_Ayuda = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
-        ckb_Ac = new javax.swing.JCheckBox();
+        ckb_Acabado = new javax.swing.JCheckBox();
         jLabel29 = new javax.swing.JLabel();
         txt_AcS = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
@@ -431,9 +431,9 @@ public class Cilindrado extends javax.swing.JDialog {
         ckb_Refrigerante.setText("Refrigerante On/Off");
         ckb_Refrigerante.setToolTipText("Seleccione para activar el refrigerante");
 
-        ckb_AcComp.setSelected(true);
-        ckb_AcComp.setText("Compensacion");
-        ckb_AcComp.setToolTipText("Seleccione para realizar la compenzacion del radio de la herramienta");
+        ckb_Compenzacion.setSelected(true);
+        ckb_Compenzacion.setText("Compensacion");
+        ckb_Compenzacion.setToolTipText("Seleccione para realizar la compenzacion del radio de la herramienta");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -456,7 +456,7 @@ public class Cilindrado extends javax.swing.JDialog {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_G0iniZ, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(ckb_Refrigerante)
-                            .addComponent(ckb_AcComp))
+                            .addComponent(ckb_Compenzacion))
                         .addGap(0, 7, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -465,7 +465,7 @@ public class Cilindrado extends javax.swing.JDialog {
                 .addGap(6, 6, 6)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ckb_AcComp)
+                .addComponent(ckb_Compenzacion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -489,12 +489,12 @@ public class Cilindrado extends javax.swing.JDialog {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        ckb_Ac.setSelected(true);
-        ckb_Ac.setText("Acabado");
-        ckb_Ac.setToolTipText("Seleccione si desea pasada de acabado");
-        ckb_Ac.addItemListener(new java.awt.event.ItemListener() {
+        ckb_Acabado.setSelected(true);
+        ckb_Acabado.setText("Acabado");
+        ckb_Acabado.setToolTipText("Seleccione si desea pasada de acabado");
+        ckb_Acabado.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                ckb_AcItemStateChanged(evt);
+                ckb_AcabadoItemStateChanged(evt);
             }
         });
 
@@ -550,14 +550,14 @@ public class Cilindrado extends javax.swing.JDialog {
                         .addComponent(jLabel37)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_AcF, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(ckb_Ac))
+                    .addComponent(ckb_Acabado))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(ckb_Ac)
+                .addComponent(ckb_Acabado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -875,16 +875,16 @@ public class Cilindrado extends javax.swing.JDialog {
         txt_W.transferFocus();
     }//GEN-LAST:event_txt_WActionPerformed
 
-    private void ckb_AcItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckb_AcItemStateChanged
-        if (!ckb_Ac.isSelected()) {
+    private void ckb_AcabadoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckb_AcabadoItemStateChanged
+        if (!ckb_Acabado.isSelected()) {
             txt_AcS.setText("");
             txt_AcF.setText("");
 //            ckb_AcComp.setSelected(ckb_Ac.isSelected());
         }
-        txt_AcS.setEnabled(ckb_Ac.isSelected());
-        txt_AcF.setEnabled(ckb_Ac.isSelected());
+        txt_AcS.setEnabled(ckb_Acabado.isSelected());
+        txt_AcF.setEnabled(ckb_Acabado.isSelected());
 //        ckb_AcComp.setEnabled(ckb_Ac.isSelected());
-    }//GEN-LAST:event_ckb_AcItemStateChanged
+    }//GEN-LAST:event_ckb_AcabadoItemStateChanged
 
     private void txt_AcSFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_AcSFocusGained
         txt_AcS.setBackground(Color.lightGray);
@@ -944,13 +944,13 @@ public class Cilindrado extends javax.swing.JDialog {
             }
         }
         if (!Herramienta.IntExt) {
-            if (ckb_Ac.isSelected()) {
+            if (ckb_Compenzacion.isSelected()) {
                 PosIni = "G0 G42 X" + txt_G0iniX.getText() + ";" + '\n';
             } else {
                 PosIni = "G0 X" + txt_G0iniX.getText() + ";" + '\n';
             }            
         }else{
-            if (ckb_Ac.isSelected()) {
+            if (ckb_Compenzacion.isSelected()) {
                 PosIni = "G0 G41 X" + txt_G0iniX.getText() + ";" + '\n';
             } else {
                 PosIni = "G0 X" + txt_G0iniX.getText() + ";" + '\n';
@@ -978,7 +978,7 @@ public class Cilindrado extends javax.swing.JDialog {
         switch (modoFinal) {
             case 0:
                 if (!txt_G0Xf.getText().equals("") && !txt_G0Zf.getText().equals("")) {
-                    if (ckb_AcComp.isSelected()) {
+                    if (ckb_Compenzacion.isSelected()) {
                         PosFin = "G0 G40 X" + txt_G0Xf.getText() + " Z" + txt_G0Zf.getText();
                     } else {
                         PosFin = "G0 X" + txt_G0Xf.getText() + " Z" + txt_G0Zf.getText();
@@ -991,13 +991,13 @@ public class Cilindrado extends javax.swing.JDialog {
             case 1:
                 if (!txt_G0Xf.getText().equals("")) {
                     if (!txt_G0Zf.getText().equals("")) {
-                        if (ckb_AcComp.isSelected()) {
+                        if (ckb_Compenzacion.isSelected()) {
                             PosFin = "G0 G40 X" + txt_G0Xf.getText() + ";" + '\n' + "Z" + txt_G0Zf.getText();
                         } else {
                             PosFin = "G0 X" + txt_G0Xf.getText() + ";" + '\n' + "Z" + txt_G0Zf.getText();
                         }
                     } else {
-                        if (ckb_AcComp.isSelected()) {
+                        if (ckb_Compenzacion.isSelected()) {
                             PosFin = "G0 G40 X" + txt_G0Xf.getText();
                         } else {
                             PosFin = "G0 X" + txt_G0Xf.getText();
@@ -1011,13 +1011,13 @@ public class Cilindrado extends javax.swing.JDialog {
             case 2:
                 if (!txt_G0Zf.getText().equals("")) {
                     if (!txt_G0Xf.getText().equals("")) {
-                        if (ckb_AcComp.isSelected()) {
+                        if (ckb_Compenzacion.isSelected()) {
                             PosFin = "G0 G40 Z" + txt_G0Zf.getText() + ";" + '\n' + "X" + txt_G0Xf.getText();
                         } else {
                             PosFin = "G0 Z" + txt_G0Zf.getText() + ";" + '\n' + "X" + txt_G0Xf.getText();
                         }
                     } else {
-                        if (ckb_AcComp.isSelected()) {
+                        if (ckb_Compenzacion.isSelected()) {
                             PosFin = "G0 G40 Z" + txt_G0Zf.getText();
                         } else {
                             PosFin = "G0 Z" + txt_G0Zf.getText();
@@ -1062,9 +1062,9 @@ public class Cilindrado extends javax.swing.JDialog {
         Principal.Procesos = Principal.Procesos + "G71 U" + txt_Ap.getText() + " R" + txt_R.getText() + ";" + '\n';
         Principal.Procesos = Principal.Procesos + "G71 P" + String.valueOf(Inicial.N - 1) + " Q" + String.valueOf(Inicial.N) + " U" + txt_U.getText() + " W" + txt_W.getText() + " F" + txt_F.getText() + ";" + '\n';
         Principal.Procesos = Principal.Procesos + Perfil;
-        if (ckb_Ac.isSelected()) {
+        if (ckb_Acabado.isSelected()) {
             Principal.Procesos = Principal.Procesos + "S" + txt_AcS.getText() + ";" + '\n';
-            if (ckb_AcComp.isSelected()) {
+            if (ckb_Compenzacion.isSelected()) {
                 Principal.Procesos = Principal.Procesos + PosIniAc;
             }
             Principal.Procesos = Principal.Procesos + "G70 P" + String.valueOf(Inicial.N - 1) + " Q" + String.valueOf(Inicial.N) + " F" + txt_AcF.getText() + ";" + '\n';
@@ -1225,8 +1225,8 @@ public class Cilindrado extends javax.swing.JDialog {
     private javax.swing.JButton btn_Cancelar;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbx_PosFinal;
-    private javax.swing.JCheckBox ckb_Ac;
-    private javax.swing.JCheckBox ckb_AcComp;
+    private javax.swing.JCheckBox ckb_Acabado;
+    private javax.swing.JCheckBox ckb_Compenzacion;
     private javax.swing.JCheckBox ckb_Refrigerante;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

@@ -513,7 +513,7 @@
                                   <Component id="txt_G0iniZ" min="-2" pref="60" max="-2" attributes="0"/>
                               </Group>
                               <Component id="ckb_Refrigerante" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="ckb_AcComp" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="ckb_Compenzacion" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
                       </Group>
@@ -527,7 +527,7 @@
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Component id="jLabel10" min="-2" pref="19" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="ckb_AcComp" min="-2" max="-2" attributes="0"/>
+                  <Component id="ckb_Compenzacion" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel11" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
@@ -590,7 +590,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Seleccione para activar el refrigerante"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="ckb_AcComp">
+        <Component class="javax.swing.JCheckBox" name="ckb_Compenzacion">
           <Properties>
             <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" value="Compensacion"/>
@@ -650,7 +650,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="txt_AcF" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="ckb_Ac" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Acabado" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -660,7 +660,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="ckb_Ac" min="-2" max="-2" attributes="0"/>
+                  <Component id="ckb_Acabado" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
@@ -678,14 +678,14 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JCheckBox" name="ckb_Ac">
+        <Component class="javax.swing.JCheckBox" name="ckb_Acabado">
           <Properties>
             <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" value="Acabado"/>
             <Property name="toolTipText" type="java.lang.String" value="Seleccione si desea pasada de acabado"/>
           </Properties>
           <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckb_AcItemStateChanged"/>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckb_AcabadoItemStateChanged"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel29">
