@@ -11,7 +11,7 @@ AppVersion=1.0.0
 ;AppVerName=LatheCNC 1.0.0
 DefaultDirName={pf}\LatheCNC
 DefaultGroupName=LatheCNC
-OutputBaseFilename=setup
+OutputBaseFilename=setupOK
 Compression=lzma
 SolidCompression=yes
 
@@ -23,9 +23,9 @@ Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\PC\Documents\NetBeansProjects\LatheCNC\Instalable\LatheCNC.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\PC\Documents\NetBeansProjects\LatheCNC\Instalable\Encabezado.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\PC\Documents\NetBeansProjects\LatheCNC\Instalable\Licencia.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Usuario\Documents\NetBeansProjects\LatheCNC\Instalable\LatheCNC.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Usuario\Documents\NetBeansProjects\LatheCNC\Instalable\Encabezado.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Usuario\Documents\NetBeansProjects\LatheCNC\Instalable\Licencia.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
